@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+/* reset */
+*, :after, :before {margin: 0; padding: 0; box-sizing: border-box;}
+* {user-select: auto;}/* auto : 기본 (더블클릭 시 텍스트 선택), none : 선택안됨, all : 클릭만으로 선택가능,  text : 기본동작과 같으나 브라우져차이 있을 수 있어 필요. */ 
+*::selection {color: #fff; background: #333;}
+ul, ol, li {list-style: none;}
+input, select, button, textarea {-webkit-appearance: none; border-radius: 0; box-shadow: none;}
+body, html {width: 100%; height: 100%; -webkit-text-size-adjust: 100%;}
+
+
+$site_max_width: 1200px;
+$font_color: #333;
+$link_color: #00c;
+$font_family: Arial, sans-serif;
+$font_size: 16px;
+$line_height: percentage(20px / $font_size);
+
+:root {
+    --color-black:#222;
+    --color-white: #fff;
+    --bg-black:: #222;
+    --bg-white: #fff;
+    --bg-gray: #f1f1f1;
+    --bg-pink: lightpink;
+    --bg-blue: lightblue;
+    --bg-green: lightgreen;
+}
+
+body {
+  color: $font_color;
+
+  // Property Nesting
+  font: {
+    size: $font_size;
+    family: $font_family;
+  }
+
+  line-height: $line_height;
+}
+
+.box {
+    padding: 30px;
+    background: var(--bg-gray);
+}
+
+
+#main {
+  width: 100%;
+  max-width: $site_max_width;
+
+  .box {
+      $wid : 1000px;
+      $widSm : 800px;
+      padding: 20px;
+      &.pink {background: var(--bg-pink);}
+      &.blue {background: var(--bg-blue);}
+      &.green {background: var(--bg-green); width: $wid;}
+      &:last-child {padding: 50px;}
+      &:not(:first-child) {margin: 15px 0 0;}
+    }
+}
+
+
+.user-select-none {user-select: none;}
