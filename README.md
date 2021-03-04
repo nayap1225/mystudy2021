@@ -21,6 +21,9 @@ option : --watch or -w : 런타임 중 파일을 감시하여 자동으로 변�
 |  __Lists__  |  공백이나 ,로 구분된 값의 목록  |  (apple, orange, banana), apple orange  |
 |  __Maps__  |  ists와 유사하나 값이 Key: Value 형태  |  L	(apple: a, orange: o, banana: b)  |
 
+```
+--output-style             CSS output style (nested | expanded | compact | compressed)
+```
 
 ```
 Libsass나 node-sass는 현재 유지 관리는 되고 있으나 폐지되었으므로 Dart Sass를 사용하도록 하자.
