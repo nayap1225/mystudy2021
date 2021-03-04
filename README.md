@@ -23,6 +23,7 @@ option : --watch or -w : 런타임 중 파일을 감시하여 자동으로 변�
 
 ```
 --output-style             CSS output style (nested | expanded | compact | compressed)
+node-sass --watch assets/scss/style.scss assets/css/style.css --output-style expanded
 ```
 
 ```
