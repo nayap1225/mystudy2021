@@ -33,4 +33,24 @@ body { color: #333; font-size: 16px; font-family: Arial, sans-serif; line-height
 
 #main .box:not(:first-child) { margin: 15px 0 0; }
 
+.box_out { width: 1000px; margin: 50px auto 0; padding: 30px; background: mediumpurple; }
+
+[class*=txt__] { font-size: 16px; color: #555; line-height: 1.5; }
+
+[class*=txt__] + [class*=txt__] { margin-top: 10px; }
+
+.txt__sm { font-size: 12px; }
+
+.txt__lg { font-size: 20px; }
+
+.txt__red { color: #ff0000; }
+
+.txt__bold { font-weight: bold; }
+
+.txt__normal { font-weight: normal; }
+
+.txt__eng { text-transform: capitalize; }
+
+.sec_cont { font-family: 'malgunGothic', 'appleSDGothicNeo', sans-serif; font-size: 22px; font-weight: bold; padding-top: 20px; padding-left: 20px; padding-bottom: 50px; padding-right: 10px; margin-top: 30px; background: paleturquoise; }
+
 .user-select-none { user-select: none; }
