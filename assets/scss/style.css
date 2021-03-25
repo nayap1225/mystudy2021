@@ -74,7 +74,19 @@ body {
 }
 
 #main .box.pink {
+  position: relative;
   background: var(--bg-pink);
+}
+
+#main .box.pink:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: url("../images/iconmonstr-bell-2-32.png");
 }
 
 #main .box.blue {
@@ -84,6 +96,15 @@ body {
 #main .box.green {
   background: var(--bg-green);
   width: 1000px;
+  padding: 20px;
+}
+
+#main .box.green .inner {
+  background: purple;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
 }
 
 #main .box:last-child {
@@ -145,6 +166,11 @@ body {
   padding-right: 10px;
   margin-top: 30px;
   background: paleturquoise;
+}
+
+article {
+  background: lightblue;
+  font-size: 16px;
 }
 
 .user-select-none {

@@ -17,6 +17,9 @@ $font_size: 16px;
 $line_height: percentage(20px / $font_size);
 $bg-primary: lightblue;
 $bg-secondary: lightpink;
+$bg-tertiary: lightgreen;
+
+$img-url: '../images/';
 
 :root {
     --color-black:#222;
@@ -55,9 +58,22 @@ body {
       $wid : 1000px;
       $widSm : 800px;
       padding: 20px;
-      &.pink {background: var(--bg-pink);}
+      &.pink {position:relative; background: var(--bg-pink);
+        &:before {content: ""; display: block; position: absolute; left: 0; top: 0; width: 32px; height: 32px; background: url($img-url + 'iconmonstr-bell-2-32.png');}
+      }
       &.blue {background: var(--bg-blue);}
-      &.green {background: var(--bg-green); width: $wid;}
+      &.green {
+        $bg-primary: purple;
+        background: var(--bg-green); width: $wid; padding: 20px;
+        .inner {background: $bg-primary; 
+          padding : {
+            left: 20px;
+            top:30px;
+            right:20px;
+            bottom:30px;
+          }
+        };
+      }
       &:last-child {padding: 50px;}
       &:not(:first-child) {margin: 15px 0 0;}
 
@@ -99,6 +115,13 @@ body {
   };
   background: paleturquoise;
 }
+
+
+article {
+  background : $bg-primary;
+  font-size: $font_size;
+}
+
 
 .user-select-none {user-select: none;}
 
